@@ -17,5 +17,8 @@ WORKDIR /app
 RUN npm install -g mocha@5.2.0 && \
     npm install
 
+# OUTPUT: Test reports are output here
+VOLUME [ "/reports" ]
+
 # Set mocha test runner as entrypoint
 ENTRYPOINT [ "mocha" ]
